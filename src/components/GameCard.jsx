@@ -15,12 +15,12 @@ const GameCard = () => {
     const {score, setScore, highscore, setHighscore}= useScore()
     const [correct, setCorrect] = useState(null)
     const [statusClass, setStatusClass] = useState(null)
-    const [clickedColor, setClickedColor] = useState(null);  // Track the clicked color
+    const [clickedColor, setClickedColor] = useState(null);  
     const { setModal } = useModalComponentContext();
     const { setModalToggle } = useModalContext();
 
-    // function to handle checking of the guess
 
+    // function to handle checking of the guess
    function handleGuess(guess){
     setClickedColor(guess)
     if (guess === correctColor){
@@ -50,7 +50,7 @@ const GameCard = () => {
 
    }
 
-  return (    
+  return (   
     <main className='game-card'>
         {/* ----------- Color Box ----------------- */}
         <div className="color-box" data-testid="colorBox" style={{backgroundColor: `${correctColor}`}} ></div>

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import checkRight from '../assets/greenCheck.png'
-import checkWrong from '../assets/RedCheck.png'
+import checkWrong from '../assets/redCheck.png'
 import { generateRandomColor } from "../actions/GenerateColors"
 import { generateColorOptions } from "../actions/GenerateOptions"
 import { useScore } from "../Context/ScoreContext"
@@ -18,9 +18,6 @@ const GameCard = () => {
     const [clickedColor, setClickedColor] = useState(null);  // Track the clicked color
     const { setModal } = useModalComponentContext();
     const { setModalToggle } = useModalContext();
-
-
-
 
     // function to handle checking of the guess
 

@@ -4,6 +4,7 @@ import { useScore } from "../../Context/ScoreContext";
 const NewGame = () => {
         const { setModalToggle } = useModalContext();
         const { setScore}= useScore()
+   
     
     
   return (

@@ -64,7 +64,7 @@ const GameCard = () => {
                      key={color}
                      onClick={()=> handleGuess(color)}
                      data-testid="colorOption"
-                    style={{backgroundColor: color}}>
+                    style={{backgroundColor: color }}>
                         <img data-testid="gameStatus" className={`status ${ clickedColor === color ? statusClass : ''}`}  src={correct ? checkRight : checkWrong} alt="check" />
                     </button>
                 )

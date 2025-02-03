@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useModalContext } from "../../Context/ModalContext";
 import { useModalComponentContext } from "../../Context/ModelComponentContext";
 import { useScore } from "../../Context/ScoreContext"
@@ -7,13 +8,20 @@ const NavBar = () => {
   const {score, highscore}= useScore() 
   const { setModal } = useModalComponentContext();
   const { setModalToggle } = useModalContext();
-        
+  const [disableButton, setDisableButton] = useState('')
 
-        const handleClick =()=>{
-          setModalToggle(true)
-          setModal(<NewGame/>)
-          console.log('i am here')
-        }
+  useEffect(() => {
+    if (score === 0){
+      setDisableButton(true)
+  }else{
+      setDisableButton(false)
+  }
+  },[score])
+  
+  const handleClick =()=>{
+    setModalToggle(true)
+    setModal(<NewGame/>)
+  }
     
   return (
       <nav className='navbar'>
@@ -33,7 +41,9 @@ const NavBar = () => {
             </div>
 
             <div className="">
-                <button  
+                <button
+                disabled={disableButton}
+                style={{ opacity: `${ disableButton ? '0.6' : '1'}`, cursor: `${ disableButton ? 'not-allowed' : 'pointer'}`}} 
                 onClick={()=> handleClick()} 
                 data-testid="newGameButton" 
               > New Game </button>

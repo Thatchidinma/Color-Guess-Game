@@ -47,6 +47,10 @@ button, .score{
   background-color: #1a1a1a;
 }
 
+.score-heading{
+  min-width: max-content;
+}
+
 .game-instructions>span{
   font-size: 1.2rem;
 }
@@ -72,7 +76,9 @@ button, .score{
 .color-box{
   width: 250px;
   height: 250px;
-  margin: 0 0 2rem ;
+  margin: 0 0 2rem 0;
+  display: flex;
+
 }
 
 .color-options{
@@ -180,6 +186,15 @@ button, .score{
   .color-options>button:hover {
     border-color: #949494;
   }
+  .modal-body{
+    background-color: #f9f9f9;
+  }
+  button, .score{
+    border: 1px solid black;
+  }
+  .nav-right button:hover{
+    background-color: blue;
+  }
 }
 
 @media screen and (max-width: 1020px) {
@@ -233,10 +248,28 @@ button, .score{
 
 @media screen and (max-width: 600px) {
 
-  .game-card{
-      width: 90%;
+  .game-instructions{
+   text-align: center;
   }
 
+  .nav-right{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 0rem;
+  }
+
+  .nav-right div:last-child {
+    grid-column: 1 / -1; /* Span both columns */
+    justify-self: center;
+    margin-top: 2rem;
+  }
+  
+  .game-card{
+      width: 90%;
+      padding:1rem 2rem;
+
+  }
+  
   .color-box{
     width: 100px;
     height: 100px;

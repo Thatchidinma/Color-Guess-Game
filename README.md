@@ -68,3 +68,14 @@ Functionality:
 Code Quality:
 * The code is well-organized, readable, and properly indented.
 * Proper use of JavaScript functions and event handling.
+
+## My Solution
+
+<img src='./public/mywork.png' alt="check" style={{width: '500px'; height: '200px'}} />
+
+Created a color game using React and vanilla css and hosted it on vercel
+
+Play it [here!](https://color-guess-game-thatchidinmas-projects.vercel.app/)
+
+
+

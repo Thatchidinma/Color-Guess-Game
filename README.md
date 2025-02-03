@@ -71,7 +71,7 @@ Code Quality:
 
 ## My Solution
 
-<img src='./public/mywork.png' alt="check" style={{width: '500px'; height: '200px'}} />
+![my work](./public/mywork.png)
 
 Created a color game using React and vanilla css and hosted it on vercel
 

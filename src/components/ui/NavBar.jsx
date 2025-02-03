@@ -26,7 +26,7 @@ const NavBar = () => {
   return (
       <nav className='navbar'>
         <div className="nav-left">
-            <p data-testid="gameInstructions" className="game-instructions"><span>INSTRUCTION: </span>From the 6 options, <br/> select the exact color match as color of the box </p>
+            <p data-testid="gameInstructions" className="game-instructions"><span>INSTRUCTION: </span>Choose the exact color that matches <br/>the box from the six options below.</p>
         </div>
 
         <div className="nav-right">
